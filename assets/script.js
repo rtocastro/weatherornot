@@ -12,7 +12,7 @@ function start() {
 }
 
 function getCurrentWeather(cityName) {
-    var weathercall = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=17991d912ecf9f915449bc8b0469a6f4&units=imperial"
+    var weathercall = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=17991d912ecf9f915449bc8b0469a6f4&units=imperial"
 
     fetch(weathercall)
         .then(function (response) {
@@ -28,7 +28,7 @@ function getCurrentWeather(cityName) {
             var windspeed = document.getElementById("wind")
 
             var iconcode = (data.weather[0].icon)
-            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
 
 
@@ -50,7 +50,7 @@ function getCurrentWeather(cityName) {
 
 function getForecastWeather(cityName) {
 
-    var weathercall = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=17991d912ecf9f915449bc8b0469a6f4&units=imperial"
+    var weathercall = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=17991d912ecf9f915449bc8b0469a6f4&units=imperial"
 
     fetch(weathercall)
         .then(function (response) {
@@ -70,7 +70,7 @@ function getForecastWeather(cityName) {
             var datetext0 = document.getElementById("date0")
 
             var iconcode = (data.list[0].weather[0].icon)
-            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
             datetext0.textContent = ("Date: " + data.list[2].dt_txt)
             nameofcity0.textContent = ("Tomorrows Weather for " + data.city.name)
@@ -90,7 +90,7 @@ function getForecastWeather(cityName) {
 
 
             var iconcode1 = (data.list[10].weather[0].icon)
-            var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+            var iconurl1 = "https://openweathermap.org/img/w/" + iconcode1 + ".png";
 
 
             datetext1.textContent = ("Date: " + data.list[10].dt_txt)
@@ -112,7 +112,7 @@ function getForecastWeather(cityName) {
 
 
             var iconcode2 = (data.list[10].weather[0].icon)
-            var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+            var iconurl2 = "https://openweathermap.org/img/w/" + iconcode2 + ".png";
 
 
             datetext2.textContent = ("Date: " + data.list[20].dt_txt)
@@ -132,7 +132,7 @@ function getForecastWeather(cityName) {
             var datetext3 = document.getElementById("date3")
 
             var iconcode3 = (data.list[30].weather[0].icon)
-            var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+            var iconurl3 = "https://openweathermap.org/img/w/" + iconcode3 + ".png";
 
 
             datetext3.textContent = ("Date: " + data.list[30].dt_txt)
@@ -152,7 +152,7 @@ function getForecastWeather(cityName) {
             var datetext4 = document.getElementById("date4")
 
             var iconcode4 = (data.list[39].weather[0].icon)
-            var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+            var iconurl4 = "https://openweathermap.org/img/w/" + iconcode4 + ".png";
 
 
             datetext4.textContent = ("Date: " + data.list[39].dt_txt)
