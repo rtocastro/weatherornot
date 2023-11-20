@@ -19,16 +19,14 @@ Just need a browswer that runs HTML 5. (Google Chrome, Firefox, Edge etc
 
 Type in city you would like to see the weather of and get the five day forecast. 
 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
     ```md
-    ![alt text](assets/images/screenshot.png)
+    ![screenshot of app](/assets/images/screenshot1.jpg)
+    ![screenshot of app w/data](/assets/images/screenshot2.jpg)
     ```
 
 ## Credits
 
-Documenation from MDN. My Instructor Luigi Campbell. 
+Documenation from MDN. My Instructor Luigi Campbell. Shout out to Richard Song for letting me know about "postman". 
 
 
 
