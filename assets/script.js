@@ -11,6 +11,8 @@ function start() {
 
 }
 
+//function for getting the current weather 
+
 function getCurrentWeather(cityName) {
     var weathercall = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=17991d912ecf9f915449bc8b0469a6f4&units=imperial"
 
@@ -31,8 +33,6 @@ function getCurrentWeather(cityName) {
             var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
 
-
-            //datetext.textContent = ("Date: " +data.list[2].dt_txt)
             nameofcity.textContent = ("Current Weather for " + data.name)
             weathericon.innerHTML = ("Icon: <img src =" + iconurl + ">")
             temperature.textContent = ("Temperature: " + data.main.temp + " F")
@@ -44,9 +44,7 @@ function getCurrentWeather(cityName) {
 
 }
 
-
-
-
+//function for calling forecasted weather
 
 function getForecastWeather(cityName) {
 
@@ -58,10 +56,7 @@ function getForecastWeather(cityName) {
 
         }).then(function (data) {
 
-            console.log(data.city.name)
-            console.log(data.list[0].wind.speed)
-
-            //day 0 of forecast
+//day 0 of forecast
             var nameofcity0 = document.getElementById("title0")
             var weathericon0 = document.getElementById("icon0")
             var temperature0 = document.getElementById("temp0")
@@ -79,7 +74,7 @@ function getForecastWeather(cityName) {
             humidity0.textContent = ("Humidity: " + data.list[0].main.humidity)
             windspeed0.textContent = ("Wind Speed: " + data.list[0].wind.speed + " mph")
 
-            //DAY 1 OF FORECAST
+//DAY 1 OF FORECAST
             var nameofcity1 = document.getElementById("title1")
             var weathericon1 = document.getElementById("icon1")
             var temperature1 = document.getElementById("temp1")
@@ -100,7 +95,7 @@ function getForecastWeather(cityName) {
             humidity1.textContent = ("Humidity: " + data.list[10].main.humidity)
             windspeed1.textContent = ("Wind Speed: " + data.list[10].wind.speed + " mph")
 
-            //DAY 2 OF FORECAST
+//DAY 2 OF FORECAST
 
             var nameofcity2 = document.getElementById("title2")
             var weathericon2 = document.getElementById("icon2")
@@ -122,7 +117,7 @@ function getForecastWeather(cityName) {
             humidity2.textContent = ("Humidity: " + data.list[20].main.humidity)
             windspeed2.textContent = ("Wind Speed: " + data.list[20].wind.speed + " mph")
 
-            //DAY 3 OF FORECAST
+ //DAY 3 OF FORECAST
 
             var nameofcity3 = document.getElementById("title3")
             var weathericon3 = document.getElementById("icon3")
@@ -142,7 +137,7 @@ function getForecastWeather(cityName) {
             humidity3.textContent = ("Humidity: " + data.list[30].main.humidity)
             windspeed3.textContent = ("Wind Speed: " + data.list[30].wind.speed + " mph")
 
-            //DAY 4 OF FORECAST
+//DAY 4 OF FORECAST
 
             var nameofcity4 = document.getElementById("title4")
             var weathericon4 = document.getElementById("icon4")
@@ -164,20 +159,6 @@ function getForecastWeather(cityName) {
         })
 }
 
+//event listen for button listening for click
 
 citysearchbutton.addEventListener("click", start)
-
-
-//for (i = 0; forecastList.length < 5; i++ ) {
-//console.log(data.list[0])
-
-
-//GIVEN a weather dashboard with form inputs
-//WHEN I search for a city
-//THEN I am presented with current and future conditions for that city and that city is added to the search history
-//WHEN I view current weather conditions for that city
-//THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-//WHEN I view future weather conditions for that city
-//THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-//WHEN I click on a city in the search history
-//THEN I am again presented with current and future conditions for that city
